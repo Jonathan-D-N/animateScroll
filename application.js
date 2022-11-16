@@ -1,9 +1,7 @@
-let frame = document.getElementById("Iframe");
+let vid = document.getElementById('Video1');
 
-frame.onload = function() {
-    frame.style.height =
-    frame.contentWindow.document.body.scrollHeight + 'px';
+vid.onpause();
 
-    frame.style.width = 
-    frame.contentWindow.document.body.scrollWidth + 'px';
-}
+window.onscroll = function() {
+    vid.pause();
+};
