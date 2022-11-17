@@ -1,9 +1,11 @@
-const scrollElements = document.querySelectorAll(".js-scroll");
+const scrollElements = 
+document.querySelectorAll(".js-scroll");
 
 
 //Detect when an element is in view
 const elementInView = (el, dividend = 1) => {
-    const elementTop = el.getBoundingClientRect().top;
+    const elementTop = 
+    el.getBoundingClientRect().top;
 
     return (
         elementTop <= 
@@ -31,17 +33,15 @@ const hideScrollElement = (element) => {
 };
 
 const handleScrollAnimation = () => {
+//not being called
     scrollElements.forEach((el) => {
         if (elementInView(el, 1.25)) {
             displayScrollElement(el);
-            console.log("in view");
         } else if (elementOutofView(el)) {
             hideScrollElement(el);
         }
     })
 }
 window.addEventListener("scroll", () => {
-    console.log("scrolling");
     handleScrollAnimation();
 });
-console.log("test");
