@@ -1,6 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Merriweather+Sans:wght@300&display=swap");
+
+body {
+    margin: 0;
+    font-family: "Merriweather Sans", sans-serif;
+}
 .js-scroll {
+    width: 50%;
+    height: 300px;
+    background-color: #8b7d7d;
     transition: opacity 500ms;
 }
 .js-scroll.scrolled {
-    opacity: 1;
+    background-color: aquamarine;
 }
