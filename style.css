@@ -53,7 +53,7 @@ header h2 {
     margin: 1rem;
 }
 
-/*@media screen and (max-width: 650px) {
+@media screen and (max-width: 650px) {
     .scroll-container,
     .scroll-container:nth-of-type(even) {
         flex-direction: column;
@@ -69,7 +69,7 @@ header h2 {
     .scroll-caption {
         width: 100%;
     }
-}*/
+}
 
 /*Styling scrolling*/
 
