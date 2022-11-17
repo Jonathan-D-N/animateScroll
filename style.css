@@ -53,7 +53,7 @@ header h2 {
     margin: 1rem;
 }
 
-@media screen and (max-width: 650px) {
+/*@media screen and (max-width: 650px) {
     .scroll-container,
     .scroll-container:nth-of-type(even) {
         flex-direction: column;
@@ -69,26 +69,37 @@ header h2 {
     .scroll-caption {
         width: 100%;
     }
-}
+}*/
 
 /*Styling scrolling*/
 
 .js-scroll {
     opacity: 0;
     transition: opacity 500ms;
-    width: 50%;
-    height: 300px;
-    background-color: #8b7d7d;
 }
 .js-scroll.scrolled {
     opacity: 1;
-    background-color: aquamarine;
 }
 
 .scrolled.fade-in {
     animation: fade-in 1s ease-in-out both;
 }
 
+.scrolled.fade-in-bottom {
+    animation: fade-in-bottom 1s ease-in-out both;
+}
+@keyframes fade-in-bottom {
+    0% {
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 @keyframes fade-in {
     0% {
         opacity: 0;

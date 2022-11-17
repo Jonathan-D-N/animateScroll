@@ -1,11 +1,8 @@
 const scrollElements = document.querySelectorAll(".js-scroll");
 
-//Set opacity of elements to 0
-//scrollElements.forEach((el) => {
-//    el.style.opacity = 0
-//})
+
 //Detect when an element is in view
-const elementInView = (el, divident = 1) => {
+const elementInView = (el, dividend = 1) => {
     const elementTop = el.getBoundingClientRect().top;
 
     return (
@@ -14,10 +11,10 @@ const elementInView = (el, divident = 1) => {
     dividend
         );
 };
-//
+
 
 const elementOutofView = (el) => {
-    elementTop = el.getBoundingClientRect().top;
+    const elementTop = el.getBoundingClientRect().top;
 
     return (
         elementTop > (window.innerHeight ||
@@ -27,22 +24,24 @@ const elementOutofView = (el) => {
 
 const displayScrollElement = (element) => {
     element.classList.add("scrolled");
-}
+};
 
 const hideScrollElement = (element) => {
     element.classList.remove("scrolled");
-}
+};
 
 const handleScrollAnimation = () => {
     scrollElements.forEach((el) => {
-        if (elementInView(el, 100)) {
+        if (elementInView(el, 1.25)) {
             displayScrollElement(el);
-        } else {
+            console.log("in view");
+        } else if (elementOutofView(el)) {
             hideScrollElement(el);
         }
     })
 }
-
-window.addEventListener('scroll', () => {
+window.addEventListener("scroll", () => {
+    console.log("scrolling");
     handleScrollAnimation();
-})
+});
+console.log("test");
