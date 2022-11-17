@@ -25,6 +25,19 @@ header h2 {
     font-weight: 350;
 }
 
+.scroll-container {
+    height: 100vh;
+    min-height: 450px;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.scroll-container:nth-of-type(1) {
+    background-color: #a8cab5;
+}
+
 .js-scroll {
     width: 50%;
     height: 300px;
