@@ -38,12 +38,22 @@ header h2 {
     background-color: #a8cab5;
 }
 
+.scroll-container:nth-of-type(2) {
+    background-color: #9680a7
+}
+
+.scroll-container:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
+
 .scroll-element,
 .scroll-caption {
     width: 50%;
 }
 
 .scroll-element {
+    border-radius: 0.5%;
+    box-shadow: 3px 3px 10px 1px rgba(142, 142, 144, 0.2);
     min-height: 300px;
     height: 100%;
     background-color: #e2dfdf;
